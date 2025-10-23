@@ -7,7 +7,7 @@ const Box = styled.div`
 display:flex;
 cursor:pointer;
 position:fixed;
-left:20rem;
+left:7rem;
 top:3rem;
 z-index:10;
 

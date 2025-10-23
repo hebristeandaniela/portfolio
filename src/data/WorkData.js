@@ -17,7 +17,7 @@ export const Work = [
         description:"Professional responsive company website for ROetCO, built in ReactJS. Includes an Admin Panel for content management.",
         tags: ["react", "company-website", "admin-panel"],
         
-        demo:"www.roetco.ro/",
+        demo:"https:www.roetco.ro/",
         github:"https://github.com/hebristeandaniela/ROetCOWebsite"
         
     },

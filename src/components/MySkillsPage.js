@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import {lightTheme} from './Themes';
 import { Design, Develope} from './AllSvgs';
 
+import BackButton from "../subComponents/BackButton";
 
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
@@ -16,9 +17,11 @@ width: 100vw;
 height:100vh;
 position: relative;
 display: flex;
-justify-content: space-evenly;
-align-items: center;
-
+  flex-wrap: wrap; // permite ca cardurile să treacă pe rândul următor pe mobil
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
 
 `
 
@@ -28,22 +31,36 @@ const Main = styled.div`
 color: ${props => props.theme.text};
 background-color: ${props => props.theme.body};
 
-padding: 2rem;
-width: 30vw;
-height: 70vh;
+  padding: 2rem;
+  width: 30%;
+  min-width: 280px; // pentru ecrane mici
+  max-width: 400px;
+  height: auto;
+
 z-index:3;
 line-height: 1.5;
 cursor: pointer;
 
+margin-left: 3rem;
 font-family: 'Ubuntu Mono',monospace;
 display: flex;
 flex-direction: column;
-justify-content: space-between;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
 
 &:hover{
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
 }
+  @media (max-width: 768px) {
+    width: 80%; // ocupă mai mult pe mobil
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%; // aproape full width pe mobil foarte mic
+    padding: 1rem;
+  }
 `
 
 const Title = styled.h2`
@@ -89,7 +106,7 @@ const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
 <Box>
-
+                <BackButton />
 <LogoComponent theme='light'/>
 <SocialIcons theme='light'/>
 <PowerButton />
