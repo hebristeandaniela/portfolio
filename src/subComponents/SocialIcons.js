@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React from "react";
-// import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
 import { Facebook, Github, LinkedIn, Instagram } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
@@ -9,11 +8,9 @@ const Icons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: fixed;
   bottom: 0;
   left: 2rem;
-
   z-index: 3;
 
   & > *:not(:last-child) {
@@ -32,13 +29,13 @@ const SocialIcons = (props) => {
   return (
     <Icons>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.2 }}
       >
         <a
           style={{ color: "inherit" }}
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           href={"https://github.com/hebristeandaniela"}
         >
           <Github
@@ -48,7 +45,7 @@ const SocialIcons = (props) => {
           />
         </a>
       </motion.div>
- 
+
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -69,13 +66,13 @@ const SocialIcons = (props) => {
       </motion.div>
 
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.6 }}
       >
         <a
           style={{ color: "inherit" }}
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           href={"https://www.facebook.com/danielahebristean/"}
         >
           <Facebook
@@ -86,13 +83,13 @@ const SocialIcons = (props) => {
         </a>
       </motion.div>
       <motion.div
-        initial={{scale:0 }}
+        initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: "spring", duration: 1, delay: 1.8 }}
       >
         <a
           style={{ color: "inherit" }}
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           href={"https://www.instagram.com/danielahebristean/"}
         >
           <Instagram

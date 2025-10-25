@@ -42,7 +42,6 @@ const play = keyframes`
 const Line = styled.span`
 background: ${props => props.theme.text};
 border: 1px solid ${props => props.theme.body};
-
 animation:${play} 1s ease infinite;
 animation-play-state: ${props => props.click ? "running" : "paused"};
 height: 1rem;

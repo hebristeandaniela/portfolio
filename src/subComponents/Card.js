@@ -1,12 +1,10 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Github } from '../components/AllSvgs';
 
-
-
 const Box = styled(motion.li)`
+
 width: 16rem;
 height: 40vh;
 background-color: ${props => props.theme.text};
@@ -24,8 +22,13 @@ transition: all 0.2s ease;
 background-color: ${props => props.theme.body};
 color:${props => props.theme.text};
 border: 1px solid ${props => props.theme.text};
-
 }
+  @media (max-width: 768px) {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+  }
+
 `
 const Title = styled.h2`
 font-size: calc(1em + 0.5vw);

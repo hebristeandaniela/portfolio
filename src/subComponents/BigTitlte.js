@@ -8,9 +8,14 @@ top: ${props => props.top};
 left: ${props => props.left};
 right: ${props => props.right};
 color:${props => `rgba(${props.theme.textRgba},0.1)`};
-font-size: calc(5rem + 5vw);
+font-size: calc(4rem + 5vw);
 z-index:0;
-
+  @media (max-width: 768px) {
+    font-size: clamp(1.5rem, 8vw, 4rem);
+    top: 8%;   // ajustează poziția pe mobil
+    left: 35%;
+    right: auto;
+  }
 `
 
 
